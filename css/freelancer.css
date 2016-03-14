@@ -86,6 +86,11 @@ hr.star-primary:after {
   font-family: 'HeroLight';
   src: url('../fonts/HeroLight.otf');
 }
+@font-face {
+  font-family: 'LatoLight';
+  src: url('../fonts/Lato-Light.eot');
+  src: url('../fonts/Lato-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/Lato-Light.woff2') format('woff2'), url('../fonts/Lato-Light.woff') format('woff'), url('../fonts/Lato-Light.ttf') format('truetype');
+}
 
 header {
     text-align: center;
@@ -196,14 +201,42 @@ header .intro-text .skills {
 section {
     padding: 80px 0;
 }
+section h2 {
+    margin: 0;
+    font: 48px HeroLight, LatoLight, Arial, sans-serifs;
+    padding-bottom: 45px;
+}
+section h2 + p {
+    padding-bottom: 95px;
+}
 section.product {
     background: #b94847;
     color: #fff;
 }
-section h2 {
-    margin: 0;
-    font: 48px/80px HeroLight, LatoLight, Arial, sans-serifs;
+section.product p {
+    font: 16px LatoLight, Arial, sans-serifs;
 }
+section.product .product-item{
+   text-align: center;
+   margin-bottom: 20px;
+}
+section.product .product-item b{
+    display: inline-block;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0px 0 1px #fff inset;
+    font-size: 50px;
+    line-height: 140px;
+}
+section.product .product-item p{
+    text-align: center;
+    margin-top:30px;
+    padding: 0 20px;
+}
+
+
 
 section.success {
     color: #fff;
