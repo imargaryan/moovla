@@ -6,6 +6,7 @@
 
 body {
     overflow-x: hidden;
+    color: #333;
 }
 
 p {
@@ -32,8 +33,7 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-family: LatoLight, Arial, sans-serifs;
 }
 
 hr.star-light,
@@ -90,6 +90,11 @@ hr.star-primary:after {
   font-family: 'LatoLight';
   src: url('../fonts/Lato-Light.eot');
   src: url('../fonts/Lato-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/Lato-Light.woff2') format('woff2'), url('../fonts/Lato-Light.woff') format('woff'), url('../fonts/Lato-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'LatoRegular';
+  src: url('../fonts/Lato-Regular.eot');
+  src: url('../fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Lato-Regular.woff2') format('woff2'), url('../fonts/Lato-Regular.woff') format('woff'), url('../fonts/Lato-Regular.ttf') format('truetype');
 }
 
 header {
@@ -207,7 +212,7 @@ section h2 {
     padding-bottom: 45px;
 }
 section h2 + p {
-    padding-bottom: 95px;
+    padding-bottom: 60px;
 }
 section.product {
     background: #b94847;
@@ -216,11 +221,11 @@ section.product {
 section.product p {
     font: 16px LatoLight, Arial, sans-serifs;
 }
-section.product .product-item{
+.card-item{
    text-align: center;
-   margin-bottom: 20px;
+   margin: 20px 0;
 }
-section.product .product-item b{
+.card-item b{
     display: inline-block;
     width: 140px;
     height: 140px;
@@ -230,13 +235,203 @@ section.product .product-item b{
     font-size: 50px;
     line-height: 140px;
 }
-section.product .product-item p{
+.card-item p{
     text-align: center;
     margin-top:30px;
     padding: 0 20px;
+    font: 16px LatoRegular, Arial, sans-serifs;
+}
+
+section.why-moovla .card-item b{
+    width:  120px;
+    height: 120px;
+    background-color: #dfdfdf;
+    font-size: 40px;
+    line-height: 120px;
+}
+section.why-moovla .card-item p{
+    color: #222;
+}
+section.price-list {
+    color: #fff;
+    background: #000 url(../img/price-bg.png) no-repeat center center;
+    background-size: cover;
 }
 
 
+.pricing {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto 3em;
+}
+
+.pricing__item {
+    position: relative;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    text-align: center;
+    -webkit-flex: 0 1 330px;
+    flex: 0 1 330px;
+}
+
+.pricing__feature-list {
+    text-align: left;
+}
+
+.pricing__action {
+    color: inherit;
+    border: none;
+    background: none;
+}
+
+.pricing__action:focus {
+    outline: none;
+}
+
+/* Individual styles */
+
+/* Sonam */
+.pricing--sonam .pricing__item {
+    margin: 1em;
+    padding: 2em;
+    cursor: default;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.85);
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+}
+
+.pricing--sonam .pricing__item:hover {
+    background: rgba(0, 0, 0, 0.95);
+}
+
+.pricing--sonam .pricing__title {
+    font-size: 30px;
+    width: 100%;
+    text-transform: none;
+    margin: 0 0 0.25em;
+    padding: 0 0 0.5em;
+    border-bottom: 1px solid #1c1c1c;
+}
+
+.pricing--sonam .pricing__price {
+    color: #b94847;
+    font:30px LatoRegular, Arial, sans-serifs;
+    padding: 1em 0 0.75em;
+}
+
+.pricing--sonam .pricing__sentence {
+    font: 14px LatoLight, Arial, sans-serifs;
+}
+
+.pricing--sonam .pricing__feature-list {
+    margin: 0;
+        padding: 3em 1.25em 2em;
+    font: 16px/30px LatoLight, Arial, sans-serifs;
+}
+
+.pricing--sonam .pricing__action {
+    margin-top: auto;
+    padding: 0.75em 2em;
+    border-radius: 4px;
+    background: #b94847;
+    font: 16px LatoRegular, Arial,sans-serifs;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+}
+
+.pricing--sonam .pricing__action:hover,
+.pricing--sonam .pricing__action:focus {
+    background: #E86564;
+}
+
+/*contact*/
+
+section.contact input {
+  display: block;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+section.contact button {
+  display: block;
+  float: right;
+  padding: 10px 20px;
+  border: none;
+  position: relative;
+  background: #b94847;
+  color: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+}
+section.contact button:hover {
+  background: #E86564;
+}
+
+section.contact .line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #b94847;
+  transition: 0.6s ease;
+}
+
+section.contact .form-group {
+  position: relative;
+  margin: 0 0 23px;
+}
+section.contact .form-group label {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  display: block;
+  font-size: 16px;
+  transition: 0.2s ease;
+}
+section.contact .form-group input:focus ~ label, .form-group input:valid ~ label {
+  transition: 0.2s ease;
+  transform: translate(-10px, -30px) scale(0.75);
+}
+section.contact .form-group input:focus ~ .line, .form-group input:valid ~ .line {
+  transition: 0.6s ease;
+  width: 100%;
+}
+section.contact .form-group textarea {
+  display: block;
+  margin: 10px auto 0;
+  padding: 10px;
+  resize: none;
+  width: 100%;
+  height: 50px;
+  outline: 0;
+  border: none;
+  transition: 0.6s ease;
+}
+section.contact .form-group textarea:focus, .form-group textarea:valid {
+  transition: 0.6s ease;
+  height: 150px;
+}
+section.contact .form-group textarea:focus ~ label, .form-group textarea:valid ~ label {
+  transition: 0.2s ease;
+  transform: translate(-10px, -30px) scale(0.75);
+}
+section.contact .form-group textarea:focus ~ .line, .form-group textarea:valid ~ .line {
+  transition: 0.6s ease;
+  width: 100%;
+}
 
 section.success {
     color: #fff;
@@ -339,9 +534,8 @@ section.success a.active {
 
 .floating-label-form-group {
     position: relative;
-    margin-bottom: 0;
-    padding-bottom: .5em;
-    border-bottom: 1px solid #eee;
+    margin-bottom: 0;    
+    border-bottom: 1px solid #999;
 }
 
 .floating-label-form-group input,
@@ -352,7 +546,6 @@ section.success a.active {
     padding-left: 0;
     border: 0;
     border-radius: 0;
-    font-size: 1.5em;
     background: 0 0;
     box-shadow: none!important;
     resize: none;
@@ -360,7 +553,6 @@ section.success a.active {
 
 .floating-label-form-group label {
     display: block;
-    z-index: 0;
     position: relative;
     top: 2em;
     margin: 0;
@@ -368,7 +560,6 @@ section.success a.active {
     line-height: 1.764705882em;
     vertical-align: middle;
     vertical-align: baseline;
-    opacity: 0;
     -webkit-transition: top .3s ease,opacity .3s ease;
     -moz-transition: top .3s ease,opacity .3s ease;
     -ms-transition: top .3s ease,opacity .3s ease;
@@ -383,10 +574,12 @@ section.success a.active {
 .floating-label-form-group-with-value label {
     top: 0;
     opacity: 1;
+    transition: 0.2s ease;
+    transform: translate(-10px, -30px) scale(0.75);
 }
 
 .floating-label-form-group-with-focus label {
-    color: #18bc9c;
+    color: #b94847;
 }
 
 form .row:first-child .floating-label-form-group {
@@ -395,6 +588,7 @@ form .row:first-child .floating-label-form-group {
 
 footer {
     color: #fff;
+    font-family: LatoLight, Arial, sans-serifs;
 }
 
 footer h3 {
@@ -403,7 +597,7 @@ footer h3 {
 
 footer .footer-above {
     padding-top: 50px;
-    background-color: #2c3e50;
+    background-color: #222;
 }
 
 footer .footer-col {
@@ -412,7 +606,7 @@ footer .footer-col {
 
 footer .footer-below {
     padding: 25px 0;
-    background-color: #233140;
+    background-color: #000;
 }
 
 .btn-social {
