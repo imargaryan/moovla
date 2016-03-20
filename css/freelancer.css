@@ -100,7 +100,7 @@ hr.star-primary:after {
 header {
     text-align: center;
     color: #fff;
-    background: url(../img/home-page-bg.png) no-repeat center center;
+    background: url(../img/home-page-bg.jpg) no-repeat center center;
     background-size: cover;
 }
 
@@ -254,7 +254,7 @@ section.why-moovla .card-item p{
 }
 section.price-list {
     color: #fff;
-    background: #000 url(../img/price-bg.png) no-repeat center center;
+    background: #000 url(../img/price-bg.jpg) no-repeat center center;
     background-size: cover;
 }
 
@@ -286,7 +286,8 @@ section.price-list {
     text-align: left;
 }
 .pricing__feature-list {
-    text-align: left;
+    text-align: left;    
+    list-style: none;
 }
 
 .pricing__action {
@@ -332,16 +333,30 @@ section.price-list {
 }
 
 .pricing--sonam .pricing__sentence {
-    font: 14px LatoLight, Arial, sans-serifs;
+    font: 16px LatoLight, Arial, sans-serifs;
 }
 
 .pricing--sonam .pricing__feature-list {
     margin: 0;
-        padding: 3em 1.25em 2em;
+    padding: 3em 1.25em 2em;
     font: 16px/30px LatoLight, Arial, sans-serifs;
 }
+.pricing--sonam .pricing__feature-list li span {
+    padding-right: 10px; 
+}
+.pricing--sonam .pricing__feature-list li span.fa-check{
+    color:green;
+} 
+.pricing--sonam .pricing__feature-list li span.fa-close{
+    color:red;
+} 
 .pricing--sonam .pricing-bottom {    
     margin-top: auto;
+}
+.pricing--sonam .pricing-bottom .pricing__sentence{
+    text-align: left;  
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
 }
 .pricing--sonam .pricing__action {
     width: 100%;
